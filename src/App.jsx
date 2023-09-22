@@ -1,4 +1,3 @@
-// import Feedback from 'components/Feedback/Feedback';
 import { Section } from 'components/Section/Section';
 import React, { Component } from 'react';
 
@@ -51,6 +50,5 @@ export class App extends Component {
         handelBtnClick={this.handelBtnClick}
       />
     );
-    // return <Feedback data={this.state} handelBtnClick={this.handelBtnClick} />;
   }
 }
