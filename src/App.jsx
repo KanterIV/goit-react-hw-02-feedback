@@ -1,4 +1,5 @@
-import Feedback from 'components/Feedback/Feedback';
+// import Feedback from 'components/Feedback/Feedback';
+import { Section } from 'components/Section/Section';
 import React, { Component } from 'react';
 
 export class App extends Component {
@@ -37,12 +38,19 @@ export class App extends Component {
 
       return {
         ...prevState,
-        positiveFeedback: positiveRate,
+        positivePercentage: positiveRate,
       };
     });
   };
 
   render() {
-    return <Feedback data={this.state} handelBtnClick={this.handelBtnClick} />;
+    return (
+      <Section
+        title="Please leave feedback"
+        data={this.state}
+        handelBtnClick={this.handelBtnClick}
+      />
+    );
+    // return <Feedback data={this.state} handelBtnClick={this.handelBtnClick} />;
   }
 }
