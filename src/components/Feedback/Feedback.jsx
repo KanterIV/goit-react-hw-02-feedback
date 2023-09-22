@@ -47,6 +47,12 @@ export default class Feedback extends Component {
           <li>
             <p>Bad: {this.props.data.bad}</p>
           </li>
+          <li>
+            <p>Total: {this.props.data.total}</p>
+          </li>
+          <li>
+            <p>Positive feedback: {`${this.props.data.positiveFeedback}%`}</p>
+          </li>
         </ul>
       </section>
     );
