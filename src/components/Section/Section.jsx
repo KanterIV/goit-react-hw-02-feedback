@@ -1,4 +1,5 @@
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
+import { Notification } from 'components/Notification/Notification';
 import { Statistics } from 'components/Statistics/Statistics';
 import React, { Component } from 'react';
 
@@ -16,7 +17,11 @@ export class Section extends Component {
             onLeaveFeedback={handelBtnClick}
           />
         </ul>
-        <Statistics data={data} />
+        {data.total ? (
+          <Statistics data={data} />
+        ) : (
+          <Notification message="There is no feedback"></Notification>
+        )}
       </section>
     );
   }
