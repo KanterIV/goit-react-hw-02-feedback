@@ -3,7 +3,7 @@ import css from './Statistics.module.css';
 
 export class Statistics extends Component {
   render() {
-    const { good, neutral, bad, total, positivePercentage } = this.props.data;
+    const { good, neutral, bad, total, positivePercentage } = this.props;
     return (
       <ul className={css.statisticsList}>
         <li>
@@ -28,7 +28,7 @@ export class Statistics extends Component {
         </li>
         <li>
           <p>
-            Positive feedback:{' '}
+            Positive feedback:
             <span
               className={css.statisticsInfo}
             >{`${positivePercentage}%`}</span>
