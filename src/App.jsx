@@ -46,6 +46,7 @@ export class App extends Component {
     return (
       <Section
         title="Please leave feedback"
+        secondTitle="Statistics"
         data={this.state}
         handelBtnClick={this.handelBtnClick}
       />

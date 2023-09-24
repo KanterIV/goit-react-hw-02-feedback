@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
+import css from './Statistics.module.css';
 
 export class Statistics extends Component {
   render() {
     const { good, neutral, bad, total, positivePercentage } = this.props.data;
     return (
-      <ul>
+      <ul className={css.statisticsList}>
         <li>
-          <p>Good: {good} </p>
+          <p>
+            Good: <span className={css.statisticsInfo}>{good}</span>
+          </p>
         </li>
         <li>
-          <p>Neutral: {neutral}</p>
+          <p>
+            Neutral: <span className={css.statisticsInfo}>{neutral}</span>
+          </p>
         </li>
         <li>
-          <p>Bad: {bad}</p>
+          <p>
+            Bad: <span className={css.statisticsInfo}>{bad}</span>
+          </p>
         </li>
         <li>
-          <p>Total: {total}</p>
+          <p>
+            Total: <span className={css.statisticsInfo}>{total}</span>
+          </p>
         </li>
         <li>
-          <p>Positive feedback: {`${positivePercentage}%`}</p>
+          <p>
+            Positive feedback:{' '}
+            <span
+              className={css.statisticsInfo}
+            >{`${positivePercentage}%`}</span>
+          </p>
         </li>
       </ul>
     );
